@@ -682,6 +682,12 @@ Service-Oriented Architecture: SOA解决多服务凌乱问题，SOA架构解决�
 框架是一个半成品，无法独立运行，必须有开发人员去定义它的规则，把项目的代码放到指定的地方，由框架整合起来，才是一个完整的程序;单纯的通过
 Java Web基础：HTTP, HTML, JavaScript, CSS, Servlet, JSP, Tomcat...去做整合，非常复杂，Spring MVC，Hibernate，MyBatis都是流行框架，但是框架只实现了很小一部分业务，还有系统架构设计、缓存、性能、高可用性、安全、备份等等
 
+#### SSH
+Struts+Spring+Hibernate的一个集成框架，是目前比较流行的一种Web应用程序开源框架, 从职责上分为四层：表示层、业务逻辑层、数据持久层和域模块层，以帮助开发人员在短期内搭建结构清晰、可复用性好、维护方便的Web应用程序; 其中使用Struts作为系统的整体基础架构，负责MVC的分离，在Struts框架的模型部分，控制业务跳转，利用Hibernate框架对持久层提供支持，Spring做管理，管理Struts和Hibernate
+
+#### SSM
+Spring+SpringMVC+MyBatis的一个集成框架, 常作为数据源较简单的web项目的框架; 其中Spring是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架, SpringMVC分离了控制器、模型对象、分派器以及处理程序对象的角色，这种分离让它们更容易进行定制; MyBatis是一个支持普通SQL查询，存储过程和高级映射的优秀持久层框架; 页面发送请求给控制器，控制器调用业务层处理逻辑，逻辑层向持久层发送请求，持久层与数据库交互，后将结果返回给业务层，业务层将处理逻辑发送给控制器，控制器再调用视图展现数据
+
 #### HTTP Server
 浏览器向服务器发送HTTP Request，服务器收到后让操作系统建立HTTP层下面的TCP连接通道socket，并提供socket，bind，listen，accept等接口，如果是单进程，就会阻塞，主要是receive会很慢，获取到数据后再send出去；可以让主进程监听80端口，但只负责接收连接请求，具体事务receive和send通过创建子进程处理，但是如果并发的连接请求任务特别多，每个进程要耗费大量的系统资源，切换进程就非常耗时，把子进程改成线程，也无法根本解决问题
 
@@ -694,7 +700,7 @@ Java Web基础：HTTP, HTML, JavaScript, CSS, Servlet, JSP, Tomcat...去做整�
 3. 操作系统返回需要处理的fd_set给HTTP Server
 4. HTTP Server仅仅处理操作系统发回来的socket
 
-### 代码管理那些事儿
+### 4 代码管理那些事儿
 #### VCS
 Version Control System: C/S系统，多个开发人员通过一个中心版本控制系统来记录文件版本，从而达到保证文件同步的目的  
 
